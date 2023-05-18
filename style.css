@@ -1,0 +1,383 @@
+/* Import Google Font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 10px;
+  background: #e3f2fd;
+}
+.wrapper {
+  height: 310px;
+  width: 420px;
+  border-radius: 7px;
+  background: #5372f0;
+  padding: 30px 30px 35px;
+  transition: height 0.2s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.wrapper.active {
+  height: 700px;
+}
+.wrapper form {
+  height: 210px;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  border-radius: 7px;
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.2s ease;
+}
+.wrapper.active form {
+  height: 225px;
+  pointer-events: none;
+}
+form img {
+  display: none;
+  max-width: 148px;
+}
+.wrapper.active form img {
+  display: block;
+}
+.wrapper.active form .content {
+  display: none;
+}
+form .content i {
+  color: #5372f0;
+  font-size: 55px;
+}
+form .content p {
+  color: #5372f0;
+  margin-top: 15px;
+  font-size: 16px;
+}
+.wrapper .details {
+  opacity: 0;
+  margin-top: 25px;
+  pointer-events: none;
+}
+.wrapper.active .details {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+.details textarea {
+  width: 100%;
+  height: 128px;
+  outline: none;
+  resize: none;
+  color: #fff;
+  font-size: 18px;
+  background: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  border: 1px solid #fff;
+}
+textarea::-webkit-scrollbar {
+  width: 0px;
+}
+textarea:hover::-webkit-scrollbar {
+  width: 5px;
+}
+textarea:hover::-webkit-scrollbar-track {
+  background: none;
+}
+textarea:hover::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 8px;
+}
+.details .buttons {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.buttons button {
+  height: 55px;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  color: #5372f0;
+  border-radius: 5px;
+  background: #fff;
+  transition: transform 0.3s ease;
+  width: calc(100% / 2 - 10px);
+}
+.buttons button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 450px) {
+  .wrapper {
+    padding: 25px;
+    height: 260px;
+  }
+  .wrapper.active {
+    height: 520px;
+  }
+}
+.title {
+  text-align: center;
+  font-weight: 100;
+  position: relative;
+  bottom: 10px;
+  color: #fff;
+}
+.footer {
+  position: relative;
+  top: 60px;
+  text-align: center;
+}
+.onurkul {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 100;
+  font-size: 14px;
+  position: relative;
+  bottom: 10px;
+}
+.icon {
+  display: block;
+  text-decoration: none;
+  font-size: 30px;
+  color: #fff;
+}
+.icon-name {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  bottom: 5px;
+}
+.router {
+  display: block;
+  float: left;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+.wrapper2 {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  height: 80px;
+  position: relative;
+  bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    min-height: 100%;
+  }
+  .footer {
+    margin-bottom: 10px;
+  }
+  .onurkul {
+    font-size: 12px;
+  }
+  .box {
+    display: block;
+    width: 100%;
+  }
+  .box button {
+    display: block;
+    background-color: #5372f0;
+    color: #fff;
+    border: 0.18em solid #5372f0;
+    font-size: 14px;
+    width: 100%;
+    margin-left: 0;
+  }
+  .box a {
+    color: #ffffff;
+    text-decoration: none;
+    border: 0.18em solid #4cae4c;
+    background-color: #4cae4c !important;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+  select {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .wrapper {
+    width: 100%;
+    min-height: 100%;
+  }
+  .footer {
+    margin-bottom: 10px;
+  }
+  .onurkul {
+    font-size: 12px;
+  }
+  .box {
+    display: block;
+    width: 100%;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .router {
+    margin-left: 35px !important;
+    margin-top: 10px !important;
+  }
+  .icon {
+    font-size: 25px !important;
+  }
+  .icon-name {
+    font-size: 16px !important;
+    position: relative;
+    bottom: 5px;
+  }
+  .wrapper {
+    height: 310px;
+  }
+  .wrapper.active {
+    height: 700px;
+  }
+  .onurkul {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .router {
+    margin-left: 30px !important;
+    margin-top: 10px !important;
+  }
+  .wrapper {
+    height: 310px;
+  }
+  .wrapper.active {
+    height: 700px;
+  }
+  .onurkul {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .router {
+    margin-left: 30px !important;
+    margin-top: 10px !important;
+  }
+  .icon {
+    font-size: 25px !important;
+  }
+  .icon-name {
+    font-size: 16px !important;
+    position: relative;
+    bottom: 5px;
+  }
+  .wrapper {
+    height: 310px;
+  }
+  .wrapper.active {
+    height: 700px;
+  }
+  .onurkul {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .wrapper {
+    width: 100%;
+    min-height: 100%;
+  }
+  .footer {
+    margin-bottom: 10px;
+  }
+  .onurkul {
+    font-size: 12px;
+  }
+  .box {
+    display: block;
+    width: 100%;
+  }
+  .box button {
+    display: block;
+    background-color: #5372f0;
+    color: #fff;
+    border: 0.18em solid #5372f0;
+    font-size: 14px;
+    width: 100%;
+    margin-left: 0;
+  }
+  .box a {
+    color: #ffffff;
+    text-decoration: none;
+    border: 0.18em solid #4cae4c;
+    background-color: #4cae4c !important;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+  select {
+    font-size: 16px;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .router {
+    margin-left: 25px !important;
+    margin-top: 10px !important;
+  }
+  .icon {
+    font-size: 25px !important;
+  }
+  .icon-name {
+    font-size: 16px !important;
+    position: relative;
+    bottom: 5px;
+  }
+  .wrapper {
+    height: 310px;
+  }
+  .wrapper.active {
+    height: 700px;
+  }
+  .onurkul {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .router {
+    margin-left: 17px !important;
+    margin-top: 10px !important;
+  }
+  .icon {
+    font-size: 25px !important;
+  }
+  .icon-name {
+    font-size: 16px !important;
+    position: relative;
+    bottom: 5px;
+  }
+  .wrapper {
+    height: 310px;
+  }
+  .wrapper.active {
+    height: 700px;
+  }
+  .onurkul {
+    font-size: 11px;
+  }
+}

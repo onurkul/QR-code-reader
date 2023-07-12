@@ -1,4 +1,4 @@
-# Karekod Okuyucu
-Bu proje, HTML-CSS-JS kullanarak yapılmış basit bir karekod okuma uygulamasıdır.
+# QR Code Reader
+This project is a simple QR code reading application using HTML-CSS-JS.
 
-Örnek: https://onurkul.com.tr/araclar/karekod-okuyucu/
+Example: https://onurkul.com.tr/araclar/karekod-okuyucu/
